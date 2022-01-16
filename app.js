@@ -10,21 +10,21 @@ const colors = [
   "#8e44ad",
   "#2ecc71",
 ];
+const CIRCLE_NUMBER = 600;
 
-const SQUARES_NUMBER = 500;
-for (let i = 0; i < SQUARES_NUMBER; i++) {
-  const square = document.createElement("div");
-  square.classList.add("square");
+for (let i = 0; i < CIRCLE_NUMBER; i++) {
+  const circle = document.createElement("div");
+  circle.classList.add("circle");
 
-  square.addEventListener("mouseover", () => {
-    setColor(square);
+  circle.addEventListener("mouseover", () => {
+    setColor(circle);
   });
 
-  square.addEventListener("mouseleave", () => {
-    removeColor(square);
+  circle.addEventListener("mouseleave", () => {
+    removeColor(circle);
   });
 
-  board.append(square);
+  board.append(circle);
 }
 
 function setColor(elem) {
